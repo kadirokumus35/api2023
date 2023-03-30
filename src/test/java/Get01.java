@@ -12,7 +12,7 @@ public class Get01 {
         i)Gherkin Language kullaniyoruz
             x)Given : On kosullar
             y)When : Aksiyonlar => Get,Put,Post ...
-            z)Then : Cikti/donutler=>dogrulama,response ..
+            z)Then : Assert ..
             t)And : Coklu islemler
     c) Testing kodunun yazimi
 
@@ -54,6 +54,9 @@ public class Get01 {
        // Content Type nasil yazdirilir
        System.out.println("Content Type : "+response.contentType());
 
+
+       // Time
+       System.out.println(response.getTime());
 
    }
 }
