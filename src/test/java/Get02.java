@@ -1,7 +1,7 @@
 
 import io.restassured.response.Response;
 import org.junit.Assert;
-import org.junit.Test;
+import org.testng.annotations.Test;
 
 import static io.restassured.RestAssured.*;
 import static org.junit.Assert.assertEquals;
@@ -34,6 +34,7 @@ public class Get02 {
             // set the expected data (POST-PUT-PATCH)
 
             // type code to send request
+
             Response response=given().when().get(url);
 
             // response print
