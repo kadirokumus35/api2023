@@ -63,7 +63,7 @@ Map<String,Object> actualDataMap=response.as(HashMap.class);// De-Serilization=>
         //4. Step: Do Assertion
 
         assertEquals(expectedData.get("name"),actualDataMap.get("meta"));
-        assertEquals(expectedData.get("name"),((Map)actualDataMap.get("data")).get("name"));
+        assertEquals(expectedData.get("name"),((Map)actualDataMap.get("data")).get("name"));//once data elementine ulasip aldigim objeyi Map formatina cast ediyorum
         assertEquals(dataKeyMap.get("email"),((Map)actualDataMap.get("data")).get("email"));
         assertEquals(dataKeyMap.get("gender"),((Map)actualDataMap.get("data")).get("gender"));
         assertEquals(dataKeyMap.get("status"),((Map)actualDataMap.get("data")).get("status"));
