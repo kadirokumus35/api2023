@@ -44,7 +44,7 @@ public class Get11 extends GoRestBaseUrl {
         response.prettyPrint();
 
         //4. STep: Do Assertion
-        //1. Yol: body() methodu ile
+
         response.then().
                 assertThat().
                 statusCode(200).
@@ -70,7 +70,17 @@ public class Get11 extends GoRestBaseUrl {
         assertTrue(numOfFemales<genders.size()-numOfFemales); // tum gender dan bayanlari cikarip erkekleri bulduk
 
 
+// 2. Yol: Tum bayan ve baylari ayri ayri Grovy ile cekelim
+        List<String>femaleList = json.getList("data.findAll{it.gender='female'}.gender"); // hepsini assign ederek female yazdirdik
+        List<String>femaleList1 = json.getList("data.findAll{it.gender=='female'}.gender");// female olanlari getirdi
 
+        System.out.println(femaleList);
+        System.out.println(femaleList1);
+
+        List<String>maleList = json.getList("data.findAll{it.gender=='male'}.gender");// female olanlari getirdi
+        System.out.println(maleList);
+
+        assertTrue(femaleList.size()<maleList.size());
 
 
 
