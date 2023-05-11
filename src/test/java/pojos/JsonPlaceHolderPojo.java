@@ -33,7 +33,7 @@ public class JsonPlaceHolderPojo {
 
     }
 
-    //3) Getter ve Setters lerimizi olustuuryoruz
+    //3) Getter ve Setters lerimizi olusturyoruz
 
     public Integer getUserId() {
         return userId;
