@@ -13,4 +13,18 @@ public class JsonTestData {
 
         return expectedData;
     }
+
+    public Map<String,Object> missDataKeys(Integer userId, String title, Boolean completed){
+        Map<String,Object> missData=new HashMap<>();
+        if (userId != null){
+            missData.put("userId",userId);
+        }
+        if (title != null){
+    missData.put("title",title);
+        }
+        if (completed != null){
+    missData.put("completed",completed);
+        }
+        return  missData;
+    }
 }
