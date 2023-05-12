@@ -24,4 +24,39 @@ public class HerOkuAppTestData {
         return expectedDataMap;
 
     }
+    /*
+    {
+    "firstname": "Josh",
+    "lastname": "Allen",
+    "totalprice": 111,
+    "depositpaid": true,
+    "bookingdates": {
+        "checkin": "2018-01-01",
+        "checkout": "2019-01-01"
+    },
+    "additionalneeds": "super bowls"
+}
+     */
+    public String expectedDataBookingDates(String checkin,String checkout){
+        String expectedDataBooking ="\"checkin\": \"2018-01-01\",\n" +
+                "        \"checkout\": \"2019-01-01\"";
+        return expectedDataBooking;
+    }
+
+    public String expectedDataInBooking(String firstname,String lastname,String totalprice,
+                                        String depositpaid, String bookingdates, String additionalneeds){
+        String expectedData = " {\n" +
+                "    \"firstname\":"+firstname+",  \n" +
+                "    \"lastname\": "+lastname+",\n" +
+                "    \"totalprice\": "+totalprice+", \n" +
+                "    \"depositpaid\": "+depositpaid+", \n" +
+                "    \"bookingdates\": {\n" +
+                "        \"checkin\": \"2018-01-01\",\n" +
+                "        \"checkout\": \"2019-01-01\"\n" +
+                "    },\n" +
+                "    \"additionalneeds\": "+additionalneeds+"\n" +
+                "}";
+        return expectedData;
+    }
+
 }

@@ -32,6 +32,17 @@ public class JsonUtil {
 
     //2.method : Java datasini Json objesine ceviriir (Serilazition)
 
+    public static String convertJavaObjectToJson(Object obj){
+
+      String jsonResult=null;
+        try {
+            jsonResult = mapper.writeValueAsString(obj);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        return jsonResult;
+    }
 
 
 
