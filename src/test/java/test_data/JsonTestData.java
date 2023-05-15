@@ -29,18 +29,17 @@ public class JsonTestData {
     }
     /*
     "{\n" +
-                "  \"userId\": 10,\n" +
-                "  \"id\": 198,\n" +
-                "  \"title\": \"quis eius est sint explicabo\",\n" +
-                "  \"completed\": true\n" +
+                "  \"userId\": 10,\n"
+                "  \"title\": \"quis eius est sint explicabo\",\n"
+                "  \"completed\": true\n"
                 " }"
      */
 
-    public String expectedDataInString(String userId,String title,String completed){
+    public String expectedDataInString(Integer userId,String title,Boolean completed){
         String  expectedData ="{\n" +
-                "   \"userId\": " + userId + "  ,\n" +
-                "   \"title\": \"" + title + "\",\n" +
-                "   \"completed\": " + completed + "\n" +
+                "   \"userId\": " + userId +",\n" +
+                "   \"title\": \"" + title +"\",\n" +
+                "   \"completed\": " + completed +"\n" +
                 "  }";
 
         return expectedData;
